@@ -503,26 +503,26 @@ export default function TaxCRM() {
               type="text"
               placeholder="Full Name *"
               value={newLead.name}
-              onChange={(e) => setNewLead({...newLead, name: e.target.value})}
+              onChange={(e) => setNewLead(prev => ({...prev, name: e.target.value}))}
               className="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
             />
             <input 
               type="email"
               placeholder="Email *"
               value={newLead.email}
-              onChange={(e) => setNewLead({...newLead, email: e.target.value})}
+              onChange={(e) => setNewLead(prev => ({...prev, email: e.target.value}))}
               className="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
             />
             <input 
               type="tel"
               placeholder="Phone"
               value={newLead.phone}
-              onChange={(e) => setNewLead({...newLead, phone: e.target.value})}
+              onChange={(e) => setNewLead(prev => ({...prev, phone: e.target.value}))}
               className="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
             />
             <select 
               value={newLead.entityType}
-              onChange={(e) => setNewLead({...newLead, entityType: e.target.value})}
+              onChange={(e) => setNewLead(prev => ({...prev, entityType: e.target.value}))}
               className="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
             >
               <option value="individual">Individual</option>
